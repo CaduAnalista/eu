@@ -40,9 +40,17 @@ main{
 
 @media screen and (max-width: 576px){
 
+    .descktop{
+        display: none;
+    }
+
+    .menu-descktop{
+        display: none;
+    }
+
     .logo a{
         text-decoration: none;
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         font-weight: 600;
         color: #a4e2c9;
     }
@@ -164,10 +172,19 @@ main{
 
 
 
-@media screen and (min-width:768px){
+@media screen and (min-width:576px){
+    
+    .descktop{
+        display: none;
+    }
+
+    .menu-descktop{
+        display: none;
+    }
+
     .logo a{
         text-decoration: none;
-        font-size: 1.4rem;
+        font-size: 2rem;
         font-weight: 600;
         color: #a4e2c9;
     }
@@ -179,8 +196,8 @@ main{
     }
 
     .btn-menu img{
-        width: 75px;
-        height: 75px;
+        width: 90px;
+        height: 90px;
     }
 
     .menu-mobile{
@@ -262,7 +279,7 @@ main{
     .rodape-informacao{
         margin: 0rem auto 6rem auto;
         background: rgba(87, 105, 95, 0.226);
-        border-radius: 3rem;
+        border-radius: 6rem;
         -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
     }
@@ -273,17 +290,103 @@ main{
         justify-content: center;
         align-items: center;
         height: 100%;
-        padding: 1rem;
+        padding: 2rem;
         gap: 3rem;
     }
 
     .links-rodape a img{
-        width: 38px;
+        width: 45px;
     }
 
     .link-mobile a:active {
         background-color: rgba(0, 0, 0, 0.05);
+    }
+
 }
 
+
+@media screen and (min-width: 1024px){
+    .btn-menu{
+        display: none;
+    }
+
+    .menu-mobile{
+        display: none;
+    }
+
+    .logo a{
+        font-size: 1.5rem;
+    }
+
+    header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .descktop{
+        display: flex;
+        margin: 0 auto;
+    }
+
+    .menu-descktop{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+        list-style: none;
+        
+    }
+
+    .link-descktop a{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .contato{
+        background-color: #a4e2c9;
+        color: #0b1c14;
+        box-shadow: 0px 0px 5px #fff;
+        padding: 0.4rem 0.8rem;
+        border-radius: 1rem;
+        font-weight: 600;
+    }
+
+    .link-contato a{
+        text-decoration: none;
+
+    }
+
+    .minha-foto{
+        width: 90%;
+        height: 90%;
+    }
+
+    .rodape-informacao{
+        margin: 0rem auto 6rem auto;
+        background: rgba(87, 105, 95, 0.226);
+        border-radius: 6rem;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+
+    .links-rodape{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 2rem;
+        gap: 3rem;
+    }
+
+    .links-rodape a img{
+        width: 45px;
+    }
+
+    .links-rodape a{
+        border-bottom: 1px solid #a4e2c9;
+        padding-bottom: 0.3rem;
+    }
 }
 
