@@ -23,9 +23,7 @@ main{
     justify-content: center;
 }
 
-
-@media screen and (max-width: 576px){
-    .cabecalho {
+.cabecalho {
         position: relative;
         width: 100%;
         min-height: 60px;
@@ -38,6 +36,9 @@ main{
         background-color: #0b1c14;
         border-bottom: 1px solid #a4e2c9;
     }
+
+
+@media screen and (max-width: 576px){
 
     .logo a{
         text-decoration: none;
@@ -163,7 +164,126 @@ main{
 
 
 
-@media screen and (min-width:576px){
+@media screen and (min-width:768px){
+    .logo a{
+        text-decoration: none;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: #a4e2c9;
+    }
+
+    .btn-menu{
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .btn-menu img{
+        width: 75px;
+        height: 75px;
+    }
+
+    .menu-mobile{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #a4e2c9;
+
+        transform-origin: top;
+        transform: scaleY(0);
+        opacity: 0;
+        pointer-events: none;
+
+        transition:
+            transform 0.6s cubic-bezier(.19,1,.22,1),
+            opacity 0.3s ease;
+    }
+
+    .lista-menu{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .link-mobile{
+        opacity: 0;
+        transform: translateY(-10px);
+        transition:
+            transform 0.45s ease,
+            opacity 0.45s ease;
+    }
+
+    .link-mobile a{
+        display: block;
+        padding: 1rem;
+        text-decoration: none;
+        color: #0b1c14;
+        border-bottom: 1px solid #0b1c14;
+        text-align: center;
+    }
+
+    .menu-mobile.ativo{
+        transform: scaleY(1);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .menu-mobile.ativo .link-mobile {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .menu-mobile.ativo .link-mobile:nth-child(1) {
+        transition-delay: 0.12s;
+    }
+    .menu-mobile.ativo .link-mobile:nth-child(2) {
+        transition-delay: 0.18s;
+    }
+    .menu-mobile.ativo .link-mobile:nth-child(3) {
+        transition-delay: 0.24s;
+    }
+    .menu-mobile.ativo .link-mobile:nth-child(4) {
+        transition-delay: 0.30s;
+    }
+
+    .secao-imagens{
+        display: flex;
+        justify-content: center;
+    }
+
+    .minha-foto{
+        max-width: 100%;
+        max-height: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .rodape-informacao{
+        margin: 0rem auto 6rem auto;
+        background: rgba(87, 105, 95, 0.226);
+        border-radius: 3rem;
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+
+    .links-rodape{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        padding: 1rem;
+        gap: 3rem;
+    }
+
+    .links-rodape a img{
+        width: 38px;
+    }
+
+    .link-mobile a:active {
+        background-color: rgba(0, 0, 0, 0.05);
+}
 
 }
 
